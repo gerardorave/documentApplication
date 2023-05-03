@@ -1,0 +1,57 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:11.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=mensclothing
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql
+    networks:
+      network:
+        ipv4_address: 182.22.0.4
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: test
+    ports:
+      - "5050:80"
+    volumes: 
+      - db:/var/lib/postgresql/data
+    networks:
+      - network
+  redis:
+    image: "redis:alpine"
+    hostname: redis
+    command: redis-server --requirepass localRedisPassword1
+    ports:
+      - "6379:6379"
+  db:
+    image: mongo:3.4.10
+    container_name: 'mongo_prueba_container' 
+    command: mongod --dbpath /data/mensclothing_mongo_db	
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: test
+      MONGO_INITDB_ROOT_PASSWORD: test
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/mensclothing_mongo_db
+volumes:
+  db:
+    driver: local
+  mongodb_data_container:
+networks:
+  network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 182.22.0.0/16
+          gateway: 182.22.0.2
+

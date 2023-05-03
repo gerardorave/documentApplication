@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 6.20.3-415f9428cffdb6805c6f85bbb29ebaf18813a2ab  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportResumeConsolidate" pageWidth="2100" pageHeight="2380" orientation="Landscape" whenNoDataType="BlankPage" columnWidth="2100" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="76b55c51-3ba5-4e7c-b372-dcadb202d532">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<field name="commercialPartner" class="java.lang.String"/>
+	<field name="orderId" class="java.lang.String"/>
+	<field name="startDate" class="java.lang.String"/>
+	<field name="endDate" class="java.lang.String"/>
+	<field name="typeOfOrder" class="java.lang.String"/>
+	<field name="salesPointName" class="java.lang.String"/>
+	<field name="salesPointAddress" class="java.lang.String"/>
+	<field name="salesPointCity" class="java.lang.String"/>
+	<field name="salesPointCountry" class="java.lang.String"/>
+	<detail>
+		<band height="90">
+			<componentElement>
+				<reportElement key="table" x="0" y="0" width="900" height="90" uuid="221185f6-6af8-4c0b-b889-1f6922743464"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<jr:column width="100" uuid="d3ac0ff5-7828-4a67-865b-e2add5e49233">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="89e4b008-c1b2-4f13-a1b5-5e374b8dd11e"/>
+								<text><![CDATA[Commercial partner]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="26" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="26" uuid="247d318f-1029-4180-aa07-b84d7d7985d2"/>
+								<textFieldExpression><![CDATA[$F{commercialPartner}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="839a9da0-264e-4f02-a11a-aacb9a8786d9">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="e4db04be-58a2-4af8-9cbc-c383464e3405"/>
+								<text><![CDATA[Order Id]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="26" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="100" height="26" uuid="c29fc3c8-a83f-4124-adb7-6d6e165f71bc"/>
+								<textFieldExpression><![CDATA[$F{orderId}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="9f499d16-d37d-4b67-ac87-d6d7a6e2e50c">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="d260a0f1-8533-4b19-8b88-6495c1982932"/>
+								<text><![CDATA[Start Date]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="26" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="100" height="26" uuid="34b6191d-ecec-44d8-82bf-74076b90a9a5"/>
+								<textFieldExpression><![CDATA[$F{startDate}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="7e1a8d3b-60f9-429a-8d09-3bb96bebcde8">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="88042fe9-4e81-4694-8b90-bbf20368458b"/>
+								<text><![CDATA[End Date]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="26" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="100" height="26" uuid="8425e7e3-33d5-45fb-b022-af09ab7aa103"/>
+								<textFieldExpression><![CDATA[$F{endDate}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="440da2ff-b264-4641-a09b-c3257375e530">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="914e8d54-9c98-4d57-a27a-60e05c110134"/>
+								<text><![CDATA[Type Of Order]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="26" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="100" height="26" uuid="4a214f38-deb4-4a9d-b68c-da4e7df3a2f1"/>
+								<textFieldExpression><![CDATA[$F{typeOfOrder}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="1fd622da-3955-4140-b8d6-425b44880612">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="7a191fe2-8cbb-474a-9f98-aa05eb706bf2"/>
+								<text><![CDATA[Sale Point]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="26" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="100" height="26" uuid="f3399e82-4462-4a4d-b2e6-aafc79e0e147"/>
+								<textFieldExpression><![CDATA[$F{salesPointName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="7d148976-2345-4021-bc11-05dffc6e6a30">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="5e669545-a747-4f05-bba5-95c0cc76fcd8"/>
+								<text><![CDATA[Sale Point address]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="26" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="100" height="26" uuid="e3ff5034-798b-48bc-8ec3-c880c62eb735"/>
+								<textFieldExpression><![CDATA[$F{salesPointAddress}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="b580f9a6-a197-4ef3-9016-880e7e919153">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="7b5b091c-55b0-4d2e-8ee2-171a3e776871"/>
+								<text><![CDATA[Sale Point city]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="26" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="100" height="26" uuid="7942bd78-be49-45e0-8126-e4215439fe7c"/>
+								<textFieldExpression><![CDATA[$F{salesPointCity}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="ba298dcc-6a03-4fa0-802e-daf39bcbfbde">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="c566ddd8-7970-4571-b8e4-ba7a3d8317c9"/>
+								<text><![CDATA[Sale Point Country]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="26" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="100" height="26" uuid="ed7b0fd4-a6d1-4511-9fbb-1d8055f4ab06"/>
+								<textFieldExpression><![CDATA[$F{salesPointCountry}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

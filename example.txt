@@ -1,0 +1,118 @@
+Url: http://localhost:8088/swagger-ui/
+
+{
+  "productsAndQuantities": [
+    {
+      "idProduct": 1,
+      "quantity": 20
+    },
+    {
+      "idProduct": 2,
+      "quantity": 35
+    },
+    {
+      "idProduct": 3,
+      "quantity": 9
+    }
+
+  ],
+  "salePointId": 1,
+  "startDate": "2023-01-01 10:00:00.000",
+  "typeOfOrderId": 1
+}
+
+to GettingData Orders (id : { 1,2 }):
+[
+  {
+    "id": 1,
+    "startDate": "2023-01-01T05:00:00-05:00",
+    "endDate": null,
+    "typeOfOrder": {
+      "id": 1,
+      "type": "Client"
+    },
+    "salePoint": {
+      "id": 1,
+      "name": "Sale point 1",
+      "address": "Fake Av 123 ",
+      "city": "Springfield",
+      "country": "USA",
+      "commercialPartner": {
+        "id": 1,
+        "name": "Partner 1",
+        "description": ""
+      }
+    },
+    "orderProducts": [
+      {
+        "id": 1,
+        "product": {
+          "id": 1,
+          "name": "Product 1",
+          "description": ""
+        },
+        "quantity": 20
+      },
+      {
+        "id": 2,
+        "product": {
+          "id": 2,
+          "name": "Product 2",
+          "description": ""
+        },
+        "quantity": 35
+      },
+      {
+        "id": 3,
+        "product": {
+          "id": 3,
+          "name": "Product 3",
+          "description": ""
+        },
+        "quantity": 9
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "startDate": "2023-01-01T06:00:00-05:00",
+    "endDate": null,
+    "typeOfOrder": {
+      "id": 2,
+      "type": "Provider"
+    },
+    "salePoint": {
+      "id": 2,
+      "name": "Sale point 2",
+      "address": "Street 123 ",
+      "city": "Washington",
+      "country": "USA",
+      "commercialPartner": {
+        "id": 1,
+        "name": "Partner 1",
+        "description": ""
+      }
+    },
+    "orderProducts": [
+      {
+        "id": 4,
+        "product": {
+          "id": 2,
+          "name": "Product 2",
+          "description": ""
+        },
+        "quantity": 11
+      },
+      {
+        "id": 5,
+        "product": {
+          "id": 3,
+          "name": "Product 3",
+          "description": ""
+        },
+        "quantity": 22
+      }
+    ]
+  }
+]
+
